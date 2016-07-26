@@ -43,7 +43,7 @@ module Ahoy
           event =
             event_model.new do |e|
               e.visit_id = visit.try(:id)
-              e.user_id = user.try(:id)
+              e.user_id = user.try(:id) if user
               e.name = name
               e.properties = properties
               e.time = options[:time]
