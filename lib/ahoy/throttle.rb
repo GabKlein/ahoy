@@ -8,7 +8,7 @@ module Ahoy
       end
     end
 
-    def_delegators self, :whitelisted?, :blacklisted?, :throttled?, :tracked?
+    def_delegators self, :whitelisted?, :blacklisted?, :throttled?, :tracked?, :blocklisted?, :safelisted?
 
     def self.throttled_response
       Rack::Attack.throttled_response

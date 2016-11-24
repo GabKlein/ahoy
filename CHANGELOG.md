@@ -1,3 +1,35 @@
+## 1.5.3
+
+- Fixed error with Rails 5 and Mongoid 6
+- Fixed regression with server not generating visit and visitor tokens
+- Accept UTM parameters as request parameters (for native apps)
+
+## 1.5.2
+
+- Better support for Rails 5
+
+## 1.5.1
+
+- Restored throttling after removing side effects
+
+## 1.5.0
+
+- Removed throttling due to unintended side effects with its implementation
+- Ensure basic token requirements
+- Fixed visit recreation on cookie expiration
+- Fixed issue where `/ahoy/visits` is called indefinitely when `Ahoy.cookie_domain = :all`
+
+## 1.4.2
+
+- Fixed issues with `where_properties`
+
+## 1.4.1
+
+- Added `where_properties` method
+- Added Kafka store
+- Added `mount` option
+- Use less intrusive version of `safely`
+
 ## 1.4.0
 
 - Use `ActiveRecordTokenStore` by default (integer instead of uuid for id)
